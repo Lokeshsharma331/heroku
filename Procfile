@@ -1,1 +1,1 @@
-web: gunicorn web:index
+web: gunicorn web:home
