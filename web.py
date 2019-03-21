@@ -8,6 +8,5 @@ app = Flask(__name__)
 def home():
   df=pd.read_csv('data.csv')
   array=df.values
-  X = array[:,0:6]
-  Y = array[:,6]
+  
   return "ssfb"
