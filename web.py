@@ -7,6 +7,6 @@ app = Flask(__name__)
 @app.route("/")
 def home():
   df=pd.read_csv('data.csv')
-  array=df.values
+  
   
   return "ssfb"
