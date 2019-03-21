@@ -1,6 +1,6 @@
 from flask import Flask
 import pandas as pd
-
+from flask import request
 from sklearn import model_selection
 from sklearn.naive_bayes import GaussianNB
 app = Flask(__name__)
@@ -19,5 +19,5 @@ def home():
   cv_results = model_selection.cross_val_score(GaussianNB(), X_train, Y_train, cv=kfold, scoring=scoring)
 
   msg = "%s: %f (%f)" % ('NB accuracy', cv_results.mean(), cv_results.std())
-
+  return request.args.get("search")
   return msg
