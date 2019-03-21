@@ -10,9 +10,4 @@ def home():
   array=df.values
   X = array[:,0:6]
   Y = array[:,6]
-  X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.33)
-  clf = GaussianNB()
-  clf.fit(X_train, Y_train) 
-  pred_clf = clf.predict(X_validation)
- 
   return "ssfb"
