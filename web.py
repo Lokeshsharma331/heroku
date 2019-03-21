@@ -20,5 +20,5 @@ def home():
 
   msg = "%s: %f (%f)" % ('NB accuracy', cv_results.mean(), cv_results.std())
   data={"result":request.args.get("result")}
-  return jsonify(data)
+  return request.args.get("result")
   return msg
