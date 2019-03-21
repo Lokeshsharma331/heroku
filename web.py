@@ -20,4 +20,4 @@ def home():
 
   msg = "%s: %f (%f)" % ('NB accuracy', cv_results.mean(), cv_results.std())
 
-  return "ssfb"
+  return msg
