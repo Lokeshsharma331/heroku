@@ -19,6 +19,6 @@ def home():
   cv_results = model_selection.cross_val_score(GaussianNB(), X_train, Y_train, cv=kfold, scoring=scoring)
 
   msg = "%s: %f (%f)" % ('NB accuracy', cv_results.mean(), cv_results.std())
-  data={"result":"svsd"}
-  return jsonify(data)
+  
+  return jsonify(result:"dsvsd")
   return msg
