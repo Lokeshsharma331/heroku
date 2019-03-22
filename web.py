@@ -20,5 +20,5 @@ def home():
 
   msg = "%s: %f (%f)" % ('NB accuracy', cv_results.mean(), cv_results.std())
  
-  return request.args.get("result")
+  return "sdv"
   return msg
