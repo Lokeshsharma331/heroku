@@ -21,7 +21,6 @@ def home():
 
   msg = "%s: %f (%f)" % ('NB accuracy', cv_results.mean(), cv_results.std())
   data={"result":"dsvsd"}
-  response=app.response_class("response"=json.dumps(data),mimetype="application/json")
-  return response
+
   return jsonify(data)
   return msg
