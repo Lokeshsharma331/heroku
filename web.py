@@ -1,6 +1,7 @@
 from flask import Flask
 import pandas as pd
-from flask import request,jsonify,json
+import json
+from flask import request,jsonify
 from sklearn import model_selection
 from sklearn.naive_bayes import GaussianNB
 app = Flask(__name__)
