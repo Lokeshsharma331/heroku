@@ -1,6 +1,6 @@
 from flask import Flask
 import pandas as pd
-from flask import request,jsonify
+from flask import request,jsonify,json
 from sklearn import model_selection
 from sklearn.naive_bayes import GaussianNB
 app = Flask(__name__)
@@ -19,6 +19,8 @@ def home():
   cv_results = model_selection.cross_val_score(GaussianNB(), X_train, Y_train, cv=kfold, scoring=scoring)
 
   msg = "%s: %f (%f)" % ('NB accuracy', cv_results.mean(), cv_results.std())
-  
-  return jsonify(result:"dsvsd")
+  data={"result":"dsvsd"}
+  response=app.response_class("response"=json.dumps(data),mimetype="application/json")
+  return response
+  return jsonify("result":"dsvsd")
   return msg
