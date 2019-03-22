@@ -22,5 +22,5 @@ def home():
   data={"result":"dsvsd"}
   response=app.response_class("response"=json.dumps(data),mimetype="application/json")
   return response
-  return jsonify("result":"dsvsd")
+  return jsonify(data)
   return msg
