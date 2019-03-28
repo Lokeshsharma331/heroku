@@ -20,6 +20,6 @@ def home():
 
 @app.route("/weather")
 def weather():
-   data={"result":"sed"}
+  data={"result":"sed"}
   return jsonify(data)
 
