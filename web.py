@@ -14,7 +14,7 @@ def home():
   X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.33)
   clf = GaussianNB()
   clf.fit(X_train, Y_train) 
-  pred = clf.predict([[float(request.args.get('ph')),float(request.args.get('n')),float(request.args.get('p')),float(request.args.get('k')),float(request.args.get('rainfall'))]])
+  pred = clf.predict([[float(request.args.get('ph')),float(request.args.get('n')),float(request.args.get('p')),float(request.args.get('k'))]])
   data={"result":pred[0]}
   return jsonify(data)
 
