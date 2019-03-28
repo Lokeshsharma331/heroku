@@ -18,3 +18,8 @@ def home():
   data={"result":pred[0]}
   return jsonify(data)
 
+@app.route("/weather")
+def weather():
+   data={"result":"sed"}
+  return jsonify(data)
+
