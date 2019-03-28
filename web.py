@@ -9,12 +9,12 @@ app = Flask(__name__)
 def home():
   df=pd.read_csv('data.csv')
   array=df.values
-  X = array[:,0:4]
-  Y = array[:,4] 
+  X = array[:,0:5]
+  Y = array[:,5] 
   X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.33)
   clf = GaussianNB()
   clf.fit(X_train, Y_train) 
-  pred = clf.predict([[float(request.args.get('ph')),float(request.args.get('n')),float(request.args.get('p')),float(request.args.get('k'))]])
+  pred = clf.predict([[float(request.args.get('ph')),float(request.args.get('n')),float(request.args.get('p')),float(request.args.get('k')),float(request.args.get('rainfall'))]])
   data={"result":pred[0]}
   return jsonify(data)
 
