@@ -20,7 +20,10 @@ def home():
 
 @app.route("/weather")
 def weather():
+  a=[]
   df=pd.read_csv('2018_pune')
-  data={"result":[4,5,6,7]}
+  for i in df.Holt_Winter:
+    a.append(i)
+  data={"result":a}
   return jsonify(data)
 
